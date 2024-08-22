@@ -1,0 +1,61 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+
+  &:hover {
+    border-color: variables.$gray-d1d;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 16px;
+    color: variables.$black-222;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include respond-to(sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__other-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+
+    &__price {
+      color: variables.$black-222;
+    }
+
+    &__love {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      color: variables.$gray-666;
+
+      &__icon {
+        height: 20px;
+        width: 20px;
+        color: variables.$orange-fa7;
+      }
+    }
+  }
+}

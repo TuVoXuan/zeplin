@@ -1,0 +1,540 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.home-wrap {
+  @include respond-to(xl) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+.main-banner {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: variables.$orange-ea4;
+
+  @include respond-to(sm) {
+    padding: 100px 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 120px 0;
+  }
+
+  &__launching-event {
+    font-size: 24px;
+    color: variables.$black-111;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 40px;
+
+    @include respond-to(sm) {
+      font-size: 40px;
+      margin-bottom: 70;
+    }
+  }
+
+  &__what-happened {
+    position: relative;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.03;
+    color: variables.$white-fff;
+    text-transform: uppercase;
+    text-shadow: 0px 6px variables.$black-111;
+
+    @include respond-to(sm) {
+      max-width: 650px;
+      font-size: 100px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 16px;
+    color: variables.$black-111;
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 16px;
+
+    @include respond-to(sm) {
+      margin-top: 70px;
+      flex-direction: row;
+      gap: 32px;
+    }
+
+    @include respond-to(lg) {
+      gap: 48px;
+      font-size: 20px;
+    }
+
+    &__icon {
+      height: 24px;
+      width: 24px;
+      stroke-width: 3px;
+      transform: rotate(90deg);
+
+      @include respond-to(sm) {
+        transform: unset;
+      }
+    }
+
+    &__market-launching {
+      padding: 12px 0;
+      border-top: 3px solid variables.$black-111;
+      border-bottom: 3px solid variables.$black-111;
+
+      @include respond-to(lg) {
+        padding: 20px 0;
+      }
+    }
+
+    &__last {
+      padding: 8px 20px;
+      border-radius: 40px;
+      border: 3px solid variables.$black-111;
+
+      @include respond-to(lg) {
+        padding: 14px 32px;
+      }
+    }
+  }
+}
+
+.introduction {
+  background-image: image-set(
+    url("./../../../public/assets/images/introduction-bg.png") 1x,
+    url("./../../../public/assets/images/introduction-bg@2x.png") 2x,
+    url("./../../../public/assets/images/introduction-bg@3x.png") 3x
+  );
+  background-position: center;
+  background-size: cover;
+  color: variables.$white-fff;
+  padding: 80px 20px;
+  box-sizing: border-box;
+
+  @include respond-to(sm) {
+    padding: 40px;
+  }
+
+  @include respond-to(lg) {
+    padding: 100px;
+  }
+
+  @include respond-to(xl) {
+    padding: 170px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    @include respond-to(lg) {
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    @include respond-to(sm) {
+      max-width: 400px;
+    }
+    @include respond-to(lg) {
+      font-size: 20px;
+      max-width: 660px;
+    }
+  }
+}
+
+.best-product {
+  background-color: variables.$yellow-fcc;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: variables.$orange-f96;
+
+  @include respond-to(lg) {
+    padding-top: 70px;
+  }
+  @include respond-to(lg) {
+    padding-top: 100px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include respond-to(lg) {
+      font-size: 30px;
+    }
+    @include respond-to(xl) {
+      font-size: 50px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2;
+
+    @include respond-to(sm) {
+      max-width: 600px;
+      font-size: 18px;
+    }
+    @include respond-to(lg) {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      gap: 0;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    @include respond-to(lg) {
+      margin-top: 70px;
+      margin-bottom: 80px;
+    }
+
+    @include respond-to(xl) {
+      margin-top: 100px;
+      margin-bottom: 120px;
+    }
+  }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  background-color: variables.$white-fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include respond-to(xl) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__see-more {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    @include respond-to(sm) {
+      margin-top: 32px;
+    }
+    @include respond-to(lg) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.brand-story {
+  position: relative;
+  background-color: variables.$blue-056;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  @include respond-to(lg) {
+    padding: 100px 0;
+  }
+
+  &__title {
+    color: variables.$yellow-fcd;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include respond-to(lg) {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    @include respond-to(xl) {
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2;
+    color: variables.$yellow-fcd;
+
+    @include respond-to(sm) {
+      max-width: 600px;
+      font-size: 18px;
+    }
+    @include respond-to(lg) {
+      font-size: 20px;
+    }
+  }
+
+  &__main {
+    z-index: 100;
+    display: grid;
+    border-top: 12px solid variables.$black-111;
+    margin-top: 50px;
+
+    @include respond-to(sm) {
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    @include respond-to(lg) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-left: 120px;
+      margin-right: 120px;
+    }
+    @include respond-to(xl) {
+      margin-left: 160px;
+      margin-right: 160px;
+    }
+
+    & div {
+      border: 1px solid variables.$black-111;
+      background-color: variables.$white-fff;
+    }
+
+    &__image {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      padding: 20px;
+      @include respond-to(sm) {
+        padding: 24px;
+      }
+      @include respond-to(lg) {
+        padding: 40px;
+      }
+      &__title {
+        font-size: 18px;
+        font-weight: 800;
+        color: variables.$black-222;
+        margin-bottom: 20px;
+        @include respond-to(sm) {
+          font-size: 20px;
+        }
+        @include respond-to(lg) {
+          font-size: 24px;
+          margin-bottom: 40px;
+        }
+      }
+      &__description {
+        font-size: 14px;
+        line-height: 1.88;
+        margin-bottom: 24px;
+        @include respond-to(sm) {
+          font-size: 16px;
+          margin-bottom: 36px;
+        }
+        @include respond-to(lg) {
+          margin-bottom: 42px;
+        }
+      }
+      &__see-more {
+        font-weight: 800;
+        font-size: 18px;
+        padding: 12px 18px;
+        height: auto;
+
+        @include respond-to(lg) {
+          padding: 20px 36px;
+        }
+      }
+    }
+  }
+
+  &__object-05 {
+    position: absolute;
+    width: 200px;
+    right: -20px;
+    bottom: 54px;
+    z-index: 2;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    @include respond-to(lg) {
+      bottom: 104px;
+    }
+  }
+  &__object-04 {
+    position: absolute;
+    width: 160px;
+    right: -32px;
+    bottom: 128px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    @include respond-to(lg) {
+      bottom: 178px;
+    }
+  }
+  &__object-01 {
+    position: absolute;
+    width: 80px;
+    top: 150px;
+    left: -36px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include respond-to(sm) {
+      width: 100px;
+      left: 42px;
+    }
+    @include respond-to(lg) {
+      width: 140px;
+      left: 10px;
+    }
+    @include respond-to(xl) {
+      width: 160px;
+      left: 20px;
+    }
+  }
+  &__object-07 {
+    position: absolute;
+    width: 80px;
+    bottom: 54px;
+    left: -40px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include respond-to(sm) {
+      width: 100px;
+      bottom: 54px;
+      left: 40px;
+    }
+    @include respond-to(lg) {
+      width: 120px;
+      bottom: 100px;
+      left: 30px;
+    }
+    @include respond-to(lg) {
+      width: 140px;
+      bottom: 100px;
+      left: 50px;
+    }
+  }
+  &__object-06 {
+    display: none;
+    position: absolute;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include respond-to(sm) {
+      display: block;
+      width: 100px;
+      bottom: 54px;
+      left: -60px;
+    }
+    @include respond-to(lg) {
+      width: 120px;
+      bottom: 100px;
+      left: -90px;
+    }
+    @include respond-to(lg) {
+      width: 140px;
+      bottom: 100px;
+      left: -90px;
+    }
+  }
+  &__object-02 {
+    position: absolute;
+    width: 80px;
+    top: 10px;
+    right: -40px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include respond-to(sm) {
+      width: 100px;
+      top: 20px;
+      right: -22px;
+    }
+    @include respond-to(lg) {
+      width: 120px;
+      top: 36px;
+      right: 70px;
+    }
+    @include respond-to(xl) {
+      width: 140px;
+      top: 36px;
+      right: 180px;
+    }
+  }
+  &__object-03 {
+    display: none;
+    position: absolute;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include respond-to(sm) {
+      display: block;
+      width: 100px;
+      top: 52px;
+      right: -60px;
+    }
+    @include respond-to(lg) {
+      width: 120px;
+      top: 82px;
+      right: 10px;
+    }
+    @include respond-to(xl) {
+      width: 140px;
+      top: 82px;
+      right: 100px;
+    }
+  }
+}

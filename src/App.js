@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import Layout from './components/Layout/Layout';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import { AppPath } from './constants';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path={AppPath.Home} element={<Home/>}/>
+        <Route path={AppPath.Login} element={<Login/>}/>
+        <Route path={AppPath.Register} element={<Register/>}/>
+      </Routes>
+      <ScrollToTop/>
+    </Layout>
   );
 }
 

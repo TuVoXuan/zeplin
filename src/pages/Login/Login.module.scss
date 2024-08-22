@@ -1,0 +1,72 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.login-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &__content {
+    width: 300px;
+
+    @include respond-to(sm) {
+      width: 454px;
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    border-bottom: 1px solid variables.$black-111;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 45px;
+    color: variables.$blue-056;
+    margin-bottom: 57px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 16px;
+
+    button {
+      margin-top: 10px;
+    }
+  }
+
+  &__other-method {
+    text-align: center;
+    color: variables.$black-404;
+    margin-top: 70px;
+    margin-bottom: 42px;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 52px;
+
+    &__icon {
+      height: 70px;
+      width: 70px;
+      object-fit: contain;
+    }
+  }
+
+  &__other-actions {
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+    margin-top: 32px;
+
+    a {
+      color: variables.$blue-1a5;
+    }
+  }
+}

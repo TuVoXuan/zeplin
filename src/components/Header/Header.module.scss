@@ -1,0 +1,114 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.header-wrap {
+  @include respond-to(xl) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+.header {
+  position: relative;
+  background-color: variables.$black-111;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+
+  @include respond-to(lg) {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  @include respond-to(xl) {
+    padding: 0 100px;
+  }
+
+  &__menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid variables.$white-fff;
+    color: variables.$white-fff;
+    border-radius: 6px;
+
+    @include respond-to(lg) {
+      display: none;
+    }
+
+    &__icon {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    width: 226px;
+    height: 26px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include respond-to(lg) {
+      position: static;
+      top: unset;
+      left: unset;
+      transform: unset;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.25s all linear;
+    background-color: variables.$black-111;
+
+    &--collage {
+      grid-template-rows: 1fr;
+      border-bottom: 1px solid variables.$gray-d1d;
+      border-top: 1px solid variables.$gray-d1d;
+    }
+  }
+
+  &__horizontal-nav {
+    display: none;
+
+    @include respond-to(lg) {
+      display: flex;
+      align-items: center;
+    }
+
+    &__item {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: variables.$white-fff;
+      padding: 0 20px;
+    }
+
+    &__divider {
+      width: 1px;
+      border-left: 1px solid variables.$white-fff;
+      height: 24px;
+    }
+  }
+
+  &__nav-menu {
+    overflow: hidden;
+
+    &__item {
+      color: variables.$white-fff;
+      font-size: 14px;
+      padding: 8px 16px;
+      text-transform: uppercase;
+    }
+  }
+}

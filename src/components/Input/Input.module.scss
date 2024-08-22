@@ -1,0 +1,51 @@
+@use "../../styles/variables.scss";
+
+.input-wrap {
+  &__label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  &__main-input-wrap {
+    position: relative;
+  }
+
+  &__suffix {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    border: 1px solid variables.$gray-6b7;
+    padding: 16px 18px;
+    min-width: 200px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    &:focus {
+      outline-color: variables.$blue-056;
+    }
+
+    &::placeholder {
+      color: variables.$gray-a1a;
+    }
+
+    &--error {
+      outline-color: variables.$red-dc2 !important;
+      border-color: variables.$red-dc2;
+    }
+  }
+
+  &__fluid {
+    width: 100%;
+  }
+
+  &__error {
+    font-size: 14px;
+    color: variables.$red-dc2;
+    margin-top: 4px;
+  }
+}

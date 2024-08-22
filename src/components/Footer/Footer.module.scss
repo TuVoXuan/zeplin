@@ -1,0 +1,103 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.footer {
+  position: relative;
+  box-sizing: border-box;
+  padding: 40px 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 1px;
+    border-top: 1px solid variables.$gray-d1d;
+    width: calc(100% - 24px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__main-info {
+    grid-column: span 2 / span 2;
+
+    @include respond-to(sm) {
+      grid-column: span 3 / span 3;
+    }
+
+    @include respond-to(lg) {
+      grid-column: span 4 / span 4;
+    }
+  }
+
+  &__info-section {
+    &__title {
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+  }
+
+  &__end-section {
+    position: relative;
+    padding: 30px 12px 40px;
+    display: grid;
+    gap: 24px;
+    box-sizing: border-box;
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      height: 1px;
+      border-top: 1px solid variables.$gray-d1d;
+      width: calc(100% - 24px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__copy-right {
+    color: variables.$gray-6b7;
+    line-height: 24px;
+
+    @include respond-to(lg) {
+      grid-column: span 8 / span 8;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    @include respond-to(lg) {
+      grid-column: span 4 / span 4;
+      justify-content: flex-end;
+    }
+
+    img {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
