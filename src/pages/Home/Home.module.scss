@@ -171,6 +171,12 @@
   }
   @include respond-to(lg) {
     padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include respond-to(xl) {
+    padding-left: 175px;
+    padding-right: 175px;
   }
 
   &__title {
@@ -535,6 +541,222 @@
       width: 140px;
       top: 82px;
       right: 100px;
+    }
+  }
+}
+
+.happened-issue {
+  background-color: variables.$yellow-fcc;
+  padding: 50px 0;
+  text-align: center;
+  overflow: hidden;
+
+  @include respond-to(sm) {
+    padding: 60px 0;
+  }
+  @include respond-to(lg) {
+    padding: 80px 0;
+  }
+  @include respond-to(xl) {
+    padding: 150px 0;
+  }
+
+  &__text-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+
+    &__title {
+      color: variables.$black-110;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      @include respond-to(lg) {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+      @include respond-to(xl) {
+        font-size: 45px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &__description {
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.2;
+      color: variables.$black-110;
+
+      @include respond-to(sm) {
+        max-width: 640px;
+        font-size: 16px;
+      }
+    }
+
+    &__see-more {
+      background-color: variables.$yellow-fcc;
+      font-weight: 800;
+      font-size: 18px;
+      padding: 12px 18px;
+      height: auto;
+      margin-top: 24px;
+
+      @include respond-to(lg) {
+        margin-top: 40px;
+        padding: 20px 36px;
+      }
+    }
+
+    &__dice-wrap {
+      position: absolute;
+      top: -40px;
+      right: -36px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      @include respond-to(sm) {
+        top: -40px;
+        right: -30px;
+      }
+      @include respond-to(lg) {
+        top: -56px;
+        right: 68px;
+      }
+      @include respond-to(xl) {
+        top: -100px;
+        right: 68px;
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+      }
+      &__dice-five-dot {
+        width: 48px;
+
+        @include respond-to(sm) {
+          width: 64px;
+        }
+        @include respond-to(lg) {
+          width: 76px;
+        }
+        @include respond-to(xl) {
+          width: 95px;
+        }
+      }
+      &__dive-three-dot {
+        width: 60px;
+        @include respond-to(sm) {
+          width: 80px;
+        }
+        @include respond-to(lg) {
+          width: 96px;
+        }
+        @include respond-to(xl) {
+          width: 120px;
+        }
+      }
+    }
+  }
+
+  &__issue-list {
+    display: grid;
+    margin-top: 60px;
+    padding: 0 50px;
+
+    @include respond-to(sm) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      padding: unset;
+    }
+  }
+
+  &__whpn-issue {
+    background-color: variables.$orange-ff5;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 63px;
+    border: 2px solid variables.$black-111;
+    @include respond-to(sm) {
+      padding: 40px 20px;
+      row-gap: 30px;
+    }
+    @include respond-to(xl) {
+      padding: 40px 60px;
+      row-gap: 63px;
+    }
+
+    &__text {
+      font-size: 40px;
+      font-weight: 800;
+      color: variables.$black-110;
+      text-transform: uppercase;
+      text-align: center;
+      @include respond-to(sm) {
+        font-size: 24px;
+      }
+      @include respond-to(lg) {
+        font-size: 32px;
+      }
+      @include respond-to(xl) {
+        font-size: 40px;
+      }
+    }
+
+    &__sign {
+      position: relative;
+      height: 100px;
+      width: 100px;
+      border: 3px solid variables.$black-111;
+      background-color: variables.$white-fff;
+      color: variables.$black-111;
+      transform: rotate(90deg);
+
+      @include respond-to(sm) {
+        transform: unset;
+        height: 60px;
+        width: 60px;
+      }
+      @include respond-to(lg) {
+        height: 80px;
+        width: 80px;
+      }
+      @include respond-to(xl) {
+        height: 100px;
+        width: 100px;
+      }
+
+      &__icon {
+        stroke-width: 3px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 70px;
+        width: 70px;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s linear;
+
+        @include respond-to(sm) {
+          height: 45px;
+          width: 45px;
+        }
+        @include respond-to(lg) {
+          height: 55px;
+          width: 55px;
+        }
+        @include respond-to(xl) {
+          height: 70px;
+          width: 70px;
+        }
+      }
     }
   }
 }
