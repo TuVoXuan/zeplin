@@ -1,0 +1,39 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  background-color: variables.$white-fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include respond-to(xl) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__see-more {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    @include respond-to(sm) {
+      margin-top: 32px;
+    }
+    @include respond-to(lg) {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.best-product {
+  background-color: variables.$yellow-fcc;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: variables.$orange-f96;
+
+  @include respond-to(lg) {
+    padding-top: 70px;
+  }
+  @include respond-to(lg) {
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include respond-to(xl) {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @include respond-to(lg) {
+      font-size: 30px;
+    }
+    @include respond-to(xl) {
+      font-size: 50px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2;
+
+    @include respond-to(sm) {
+      max-width: 600px;
+      font-size: 18px;
+    }
+    @include respond-to(lg) {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      gap: 0;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    @include respond-to(lg) {
+      margin-top: 70px;
+      margin-bottom: 80px;
+    }
+
+    @include respond-to(xl) {
+      margin-top: 100px;
+      margin-bottom: 120px;
+    }
+  }
+}
