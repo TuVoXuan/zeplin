@@ -8,10 +8,6 @@
   border: 1px solid transparent;
   transition: all 0.3s linear;
 
-  &:hover {
-    border-color: variables.$gray-d1d;
-  }
-
   &__thumbnail {
     width: 100%;
     height: auto;
