@@ -52,6 +52,13 @@
     align-items: center;
     margin-bottom: 52px;
 
+    button {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
     &__icon {
       height: 70px;
       width: 70px;

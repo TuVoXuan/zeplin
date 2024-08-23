@@ -14,21 +14,21 @@ export default function Register() {
       .string()
       .matches(EmailRegex, {
         message:
-          "Invalid email format. It must have format like: example@test.com .",
+          "Invalid email format. It must have a format like: example@test.com.",
       })
-      .required(),
+      .required("Email is required."),
     password: yup
       .string()
       .min(8, "Password must have at least 8 characters.")
-      .max(12, "Password must less than or equal 12 characters.")
+      .max(12, "Password must be less than or equal to 12 characters.")
       .matches(PasswordRegex, {
         message:
           "Password must including letters, number and special characters.",
       })
-      .required(),
+      .required("Password is required."),
     confirmPassword: yup
       .string()
-      .required()
+      .required("Confirm password is required.")
       .oneOf([yup.ref("password"), null], "Passwords must match"),
     address: yup.string().nullable(),
     additionAddress: yup.string().nullable(),

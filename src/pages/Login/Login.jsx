@@ -6,13 +6,27 @@ import * as yup from "yup";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
-import { AppPath } from "../../constants/index";
+import { AppPath, EmailRegex, PasswordRegex } from "../../constants/index";
 
 export default function Login() {
   const navigate = useNavigate();
   const schema = yup.object().shape({
-    email: yup.string().required(),
-    password: yup.string().required(),
+    email: yup
+      .string()
+      .matches(EmailRegex, {
+        message:
+          "Invalid email format. It must have a format like: example@test.com.",
+      })
+      .required("Email is required."),
+    password: yup
+      .string()
+      .min(8, "Password must have at least 8 characters.")
+      .max(12, "Password must be less than or equal to 12 characters.")
+      .matches(PasswordRegex, {
+        message:
+          "Password must including letters, number and special characters.",
+      })
+      .required("Password is required."),
   });
 
   const {
