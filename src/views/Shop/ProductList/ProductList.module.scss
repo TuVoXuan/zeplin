@@ -1,0 +1,235 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.wrapper {
+  box-sizing: border-box;
+  padding-bottom: 24px;
+
+  @include respond-to(sm) {
+    padding-bottom: 30px;
+  }
+  @include respond-to(lg) {
+    padding-bottom: 40px;
+  }
+  @include respond-to(xl) {
+    padding-bottom: 54px;
+  }
+}
+
+.list-categories-nav-wrap {
+  position: relative;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+
+  @include respond-to(lg) {
+    margin-top: 24px;
+  }
+  @include respond-to(lg) {
+    margin-top: 40px;
+  }
+
+  &__chevron-right,
+  &__chevron-left {
+    padding: 0 10px;
+    color: variables.$black-111;
+    width: fit-content;
+    position: static;
+
+    @include respond-to(sm) {
+      display: none;
+    }
+
+    &__icon {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &__chevron-left {
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  &__chevron-right {
+    right: 0;
+  }
+}
+
+.list-categories {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+
+  @include respond-to(sm) {
+    position: static;
+  }
+  &__item {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 14px;
+    color: variables.$black-111;
+    text-wrap: nowrap;
+    padding: 12px;
+
+    @include respond-to(sm) {
+      padding: 16px;
+      font-size: 16px;
+    }
+
+    @include respond-to(lg) {
+      padding: 32px 22px;
+      font-size: 18px;
+    }
+
+    &--active {
+      color: variables.$blue-245;
+    }
+  }
+}
+
+.list-categories-container {
+  position: relative;
+  overflow-x: auto;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @include respond-to(sm) {
+    justify-content: center;
+    height: 48px;
+  }
+  @include respond-to(lg) {
+    height: 52px;
+  }
+  @include respond-to(lg) {
+    height: 84px;
+  }
+}
+
+.actions-wrap {
+  border-top: 1px solid variables.$black-111;
+  border-bottom: 1px solid variables.$black-111;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+
+  @include respond-to(sm) {
+    padding: 16px 20px;
+  }
+
+  @include respond-to(lg) {
+    padding: 20px 50px;
+    margin-bottom: 20px;
+  }
+
+  @include respond-to(xl) {
+    padding: 20px 100px;
+    margin-bottom: 25px;
+  }
+
+  @include respond-to(2xl) {
+    max-width: 1140px;
+  }
+
+  &__item {
+    font-size: 14px;
+    font-family: "Noto Sans KR", system-ui;
+
+    &--active {
+      color: variables.$orange-ea4;
+    }
+  }
+}
+
+.product-list-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+
+  @include respond-to(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include respond-to(2xl) {
+    max-width: 1140px;
+  }
+}
+
+.product-list-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  order: -1;
+
+  @include respond-to(sm) {
+    order: 1;
+  }
+
+  &__layout-selection,
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__layout-selection {
+    display: none;
+    @include respond-to(sm) {
+      display: flex;
+    }
+  }
+
+  &__form {
+    flex-wrap: wrap;
+
+    &__search {
+      width: 100%;
+      @include respond-to(sm) {
+        width: 280px;
+      }
+    }
+
+    &__sort {
+      width: 100%;
+      @include respond-to(sm) {
+        width: 125px;
+        & > div {
+          min-width: unset;
+        }
+      }
+    }
+  }
+}
+
+.product-list-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  background-color: variables.$white-fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include respond-to(2xl) {
+    max-width: 1140px;
+  }
+}

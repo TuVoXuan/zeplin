@@ -4,6 +4,8 @@ import Heart from "./Heart";
 import Menu from "./Menu";
 import ArrowRightLong from "./ArrowRightLong";
 import Diamond from "./Diamond";
+import ChevronRight from "./ChevronRight";
+import Search from "./Search";
 
 const Icons = {
   Menu,
@@ -12,6 +14,8 @@ const Icons = {
   Close,
   ArrowRightLong,
   Diamond,
+  ChevronRight,
+  Search,
 };
 
 export default Icons;

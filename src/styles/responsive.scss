@@ -3,6 +3,7 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+$breakpoint-2xl: 1440px;
 
 // Mixin for media queries
 @mixin respond-to($breakpoint) {
@@ -20,6 +21,10 @@ $breakpoint-xl: 1200px;
     }
   } @else if $breakpoint ==xl {
     @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  } @else if $breakpoint ==2xl {
+    @media (min-width: $breakpoint-2xl) {
       @content;
     }
   }

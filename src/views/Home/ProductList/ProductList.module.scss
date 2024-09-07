@@ -24,6 +24,10 @@
     padding-bottom: 100px;
   }
 
+  @include respond-to(2xl) {
+    max-width: 1140px;
+  }
+
   &__see-more {
     grid-column: 1 / -1;
     display: flex;
