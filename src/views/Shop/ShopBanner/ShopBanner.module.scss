@@ -1,0 +1,30 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.container {
+  background-image: image-set(
+    url("../../../../public/assets/images/shop-banner-img.png") 1x,
+    url("../../../../public/assets/images/shop-banner-img@2x.png") 2x,
+    url("../../../../public/assets/images/shop-banner-img@3x.png") 3x
+  );
+  background-size: cover;
+  background-position: center;
+  height: 124px;
+
+  @include respond-to(sm) {
+    height: 254px;
+  }
+  @include respond-to(lg) {
+    height: 339px;
+  }
+  @include respond-to(xl) {
+    height: 424px;
+  }
+  @include respond-to(2xl) {
+    height: 477px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}

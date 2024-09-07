@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import { AppPath } from './constants';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Shop from './pages/Shop/Shop';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path={AppPath.Home} element={<Home/>}/>
         <Route path={AppPath.Login} element={<Login/>}/>
         <Route path={AppPath.Register} element={<Register/>}/>
+        <Route path={AppPath.Shop} element={<Shop/>}/>
       </Routes>
       <ScrollToTop/>
     </Layout>

@@ -1,0 +1,13 @@
+@use "../../../styles/variables.scss";
+
+.grid-button {
+  display: grid;
+  gap: 2px;
+  cursor: pointer;
+  &__cell {
+    background-color: variables.$gray-a1a;
+    &--active {
+      background-color: variables.$orange-ea4;
+    }
+  }
+}

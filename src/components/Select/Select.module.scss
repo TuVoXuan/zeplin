@@ -1,0 +1,86 @@
+@use "../../styles/variables.scss";
+
+.wrapper {
+  position: relative;
+}
+
+.select {
+  position: relative;
+  border: 1px solid variables.$gray-6b7;
+  padding: 16px 18px;
+  min-width: 200px;
+  font-size: 14px;
+
+  &__dropdown-icon {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(variables.$gray-6b7, 0.8);
+
+    &__icon {
+      height: 24px;
+      width: 24px;
+      transform: rotate(90deg);
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &:focus {
+    outline-color: variables.$blue-056;
+  }
+
+  &__placeholder {
+    color: variables.$gray-a1a;
+  }
+
+  &--error {
+    outline-color: variables.$red-dc2 !important;
+    border-color: variables.$red-dc2;
+  }
+
+  &--has-dropdown-icon {
+    padding-right: 40px;
+  }
+}
+
+.select-modal {
+  position: absolute;
+  top: calc(100% + 8px);
+  border: 1px solid variables.$gray-6b7;
+  background-color: variables.$white-fff;
+  max-height: 250px;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  z-index: 10;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: none;
+
+  &--show {
+    display: block;
+  }
+
+  &__item {
+    padding: 12px;
+    font-size: 14px;
+    color: variables.$black-111;
+    background-color: variables.$white-fff;
+
+    &:hover {
+      background-color: rgba(variables.$gray-d1d, 0.5);
+    }
+
+    &--active {
+      background-color: rgba(variables.$blue-056, 0.5);
+      font-weight: 600;
+      &:hover {
+        background-color: rgba(variables.$blue-056, 0.5);
+      }
+    }
+  }
+}

@@ -13,6 +13,7 @@ const Input = forwardRef((props, ref) => {
     placeholder,
     suffix,
     onClickSuffix,
+    className,
     ...rest
   } = props;
 
@@ -28,7 +29,7 @@ const Input = forwardRef((props, ref) => {
   }, [suffix]);
 
   return (
-    <div className={styles["input-wrap"]}>
+    <div className={clsx(styles["input-wrap"], className)}>
       {label && (
         <label className={styles["input-wrap__label"]}>
           {label}
