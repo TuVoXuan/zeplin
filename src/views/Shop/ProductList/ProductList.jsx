@@ -59,7 +59,7 @@ const TypeGridLayout = {
 export default function ProductList() {
   const [activeCategory, setActiveCategory] = useState(categoryOptions[0]);
   const [typeGridLayout, setTypeGridLayout] = useState(TypeGridLayout.Four);
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const screenSize = useResponsive();
 
   const handleChangeSort = (option) => {
@@ -118,7 +118,7 @@ export default function ProductList() {
         </span>
       </div>
 
-      <div className={styles["product-list-info"]}>
+      <div className={clsx("container", styles["product-list-info"])}>
         <p>전체 상품 207</p>
         <div className={styles["product-list-actions"]}>
           <div className={styles["product-list-actions__layout-selection"]}>
@@ -157,7 +157,7 @@ export default function ProductList() {
         </div>
       </div>
 
-      <div className={styles["product-list-wrap"]}>
+      <div className={clsx("container", styles["product-list-wrap"])}>
         <ProductCard
           thumbnail="/assets/images/product-img-01.png"
           name="product name 010000001010"

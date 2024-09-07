@@ -153,10 +153,15 @@
   align-items: start;
   flex-direction: column;
   gap: 24px;
+  box-sizing: border-box;
 
   @include respond-to(sm) {
     flex-direction: row;
     align-items: center;
+  }
+
+  @include respond-to(2xl) {
+    max-width: 1140px;
   }
 }
 
@@ -222,5 +227,9 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  @include respond-to(2xl) {
+    max-width: 1140px;
   }
 }
