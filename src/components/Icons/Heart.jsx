@@ -2,14 +2,17 @@ import * as React from "react";
 const Heart = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    xmlSpace="preserve"
-    viewBox="0 0 512 512"
-    fill="currentColor"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.5}
+    className="size-6"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path
-      d="M365.4 59.628c60.56 0 109.6 49.03 109.6 109.47 0 109.47-109.6 171.8-219.06 281.271C146.47 340.898 37 278.568 37 169.099c0-60.44 49.04-109.47 109.47-109.47 54.73 0 82.1 27.37 109.47 82.1 27.36-54.73 54.73-82.101 109.46-82.101z"
-      className="fill-ff7979"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
     />
   </svg>
 );

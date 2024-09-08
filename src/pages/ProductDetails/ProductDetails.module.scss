@@ -1,0 +1,7 @@
+@import "../../styles/responsive.scss";
+
+.product-details-wrap {
+  @include respond-to(2xl) {
+    max-width: 1140px;
+  }
+}

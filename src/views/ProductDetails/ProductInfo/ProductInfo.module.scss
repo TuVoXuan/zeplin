@@ -1,0 +1,177 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.product-info-wrap {
+  padding: 24px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 24px;
+
+  @include respond-to(sm) {
+    gap: 46px;
+    padding-top: 40px;
+  }
+
+  @include respond-to(lg) {
+    padding: 60px 0 60px;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  @include respond-to(xl) {
+    padding: 100px 0 100px;
+    gap: 40px;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+}
+
+.product-img-swiper {
+  :global(.swiper-pagination) {
+    position: static;
+  }
+  :global(.swiper-pagination-bullet-active) {
+    background: variables.$black-111;
+  }
+
+  @include respond-to(sm) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include respond-to(lg) {
+    padding-left: 0;
+    padding-right: 0;
+    grid-column: span 3 / span 3;
+    order: 2;
+  }
+
+  @include respond-to(xl) {
+    grid-column: span 4 / span 4;
+  }
+
+  &__item {
+    height: 100%;
+    width: 100%;
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.product-img-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  @include respond-to(lg) {
+    grid-column: span 1 / span 1;
+    order: 1;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 400px;
+  }
+
+  &__item {
+    height: 40px;
+    width: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    @include respond-to(sm) {
+      height: 80px;
+      width: 80px;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.product-info {
+  border-top: 1px solid variables.$black-111;
+  padding-top: 12px;
+
+  @include respond-to(sm) {
+    padding-top: 24px;
+  }
+
+  @include respond-to(lg) {
+    grid-column: span 3 / span 3;
+    order: 3;
+  }
+
+  @include respond-to(xl) {
+    grid-column: span 4 / span 4;
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    &__prod-name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    &__wish {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      &__icon {
+        transition: all 0.3s linear;
+        color: variables.$gray-8c8;
+        fill: variables.$white-fff;
+        height: 24px;
+        width: 24px;
+
+        &--active {
+          color: variables.$orange-fa7;
+          fill: variables.$orange-fa7;
+        }
+      }
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+
+    @include respond-to(sm) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid variables.$gray-f4f;
+  }
+
+  &__group-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    :global(.zpl-select) {
+      border-color: variables.$gray-d4d;
+    }
+
+    &__group-btn {
+      display: flex;
+      button {
+        font-weight: 500;
+      }
+    }
+  }
+}

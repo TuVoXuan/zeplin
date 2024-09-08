@@ -33,7 +33,8 @@ export default function Select({
       <div
         className={clsx(
           styles["select"],
-          showDropdownIcon && styles["select--has-dropdown-icon"]
+          showDropdownIcon && styles["select--has-dropdown-icon"],
+          "zpl-select"
         )}
         onClick={handleSelectInput}
       >

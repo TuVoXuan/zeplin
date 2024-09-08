@@ -3,13 +3,15 @@ import styles from "./Button.module.scss";
 import clsx from "clsx";
 
 export default function Button(props) {
-  const { children, variant, fluid, className, htmlType, onClick } = props;
+  const { children, variant, color, fluid, className, htmlType, onClick } =
+    props;
   return (
     <button
       className={clsx(
         className,
         styles.button,
-        styles[`button--${variant}`],
+        styles[variant],
+        styles[color],
         fluid && styles[`button--w-ful`]
       )}
       onClick={onClick}
