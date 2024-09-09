@@ -1,0 +1,27 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.review-list-wrap {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.divider {
+  height: 1px;
+  border-bottom: 1px solid variables.$gray-ece;
+}
+
+.pagination {
+  margin-top: 28px;
+  @include respond-to(sm) {
+    margin-top: 37px;
+  }
+  @include respond-to(lg) {
+    margin-top: 44px;
+  }
+  @include respond-to(xl) {
+    margin-top: 56px;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../styles/responsive.scss";
+
+.best-products-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  @include respond-to(sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  @include respond-to(lg) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.pagination {
+  margin-top: 28px;
+  @include respond-to(sm) {
+    margin-top: 37px;
+  }
+  @include respond-to(lg) {
+    margin-top: 44px;
+  }
+  @include respond-to(xl) {
+    margin-top: 56px;
+  }
+}

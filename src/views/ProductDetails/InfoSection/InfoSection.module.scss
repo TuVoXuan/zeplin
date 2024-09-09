@@ -1,0 +1,151 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.info-section {
+  font-family: "Noto Sans KR", system-ui;
+}
+
+.info-section-head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid variables.$black-111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  @include respond-to(lg) {
+    font-size: 18px;
+  }
+  @include respond-to(xl) {
+    font-size: 20px;
+  }
+  @include respond-to(xl) {
+    font-size: 24px;
+  }
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: variables.$gray-8c8;
+
+  @include respond-to(sm) {
+    gap: 16px;
+  }
+  @include respond-to(lg) {
+    gap: 24px;
+  }
+  @include respond-to(xl) {
+    gap: 30px;
+  }
+
+  &__item {
+    font-size: 14px;
+    @include respond-to(lg) {
+      font-size: 16px;
+    }
+    @include respond-to(xl) {
+      font-size: 18px;
+    }
+
+    &--active {
+      color: variables.$black-111;
+    }
+  }
+}
+
+.tabs-short-wrap {
+  position: relative;
+  &__btn {
+    padding: 4px;
+    color: variables.$gray-d1d;
+  }
+  &__modal {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    border: 1px solid variables.$gray-6b7;
+    background-color: variables.$white-fff;
+    max-height: 250px;
+    width: fit-content;
+    overflow-y: auto;
+    box-sizing: border-box;
+    z-index: 10;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 6px 0;
+    display: none;
+
+    &--show {
+      display: block;
+    }
+
+    &__item {
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 14px;
+      white-space: nowrap;
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+      @include respond-to(xl) {
+        font-size: 18px;
+      }
+
+      &:hover {
+        background-color: rgba(variables.$gray-d1d, 0.5);
+      }
+
+      &--active {
+        background-color: rgba(variables.$blue-056, 0.5);
+        font-weight: 600;
+        &:hover {
+          background-color: rgba(variables.$blue-056, 0.5);
+        }
+      }
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__item {
+    text-decoration: underline;
+    color: variables.$black-111;
+    font-size: 14px;
+    text-underline-offset: 4px;
+    @include respond-to(lg) {
+      font-size: 16px;
+    }
+    @include respond-to(xl) {
+      font-size: 18px;
+    }
+  }
+}
+
+.info-section-body {
+  line-height: 2;
+  padding-top: 12px;
+
+  @include respond-to(sm) {
+    padding-top: 20px;
+  }
+  @include respond-to(lg) {
+    padding-top: 24px;
+  }
+  @include respond-to(xl) {
+    padding-top: 30px;
+  }
+}

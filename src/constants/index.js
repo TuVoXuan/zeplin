@@ -6,5 +6,5 @@ export const AppPath = {
     Login: '/login',
     Register: '/register',
     Shop: '/shop',
-    ProductDetail: '/product-details/:productCode'
+    ProductDetail: '/product-details'
 }

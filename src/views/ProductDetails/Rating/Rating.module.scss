@@ -1,0 +1,31 @@
+@use "../../../styles/variables.scss";
+
+.rating-wrap {
+  display: flex;
+  align-items: center;
+
+  &.medium {
+    gap: 8px;
+  }
+  &.small {
+    gap: 6px;
+  }
+
+  &__icon {
+    fill: variables.$gray-e5e;
+    color: variables.$gray-e5e;
+    &--active {
+      color: variables.$orange-f96;
+      fill: variables.$orange-f96;
+    }
+  }
+
+  &__icon.medium {
+    height: 26px;
+    width: 26px;
+  }
+  &__icon.small {
+    height: 20px;
+    width: 20px;
+  }
+}

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Layout from './components/Layout/Layout';
 import Login from './pages/Login/Login';
@@ -18,7 +17,7 @@ function App() {
         <Route path={AppPath.Login} element={<Login/>}/>
         <Route path={AppPath.Register} element={<Register/>}/>
         <Route path={AppPath.Shop} element={<Shop/>}/>
-        <Route path={AppPath.ProductDetail} element={<ProductDetails/>}/>
+        <Route path={`${AppPath.ProductDetail}/:productCode`} element={<ProductDetails/>}/>
       </Routes>
       <ScrollToTop/>
     </Layout>

@@ -10,6 +10,7 @@ import Descriptions from "../../../components/Descriptions/Descriptions";
 import Select from "../../../components/Select/Select";
 import Button from "../../../components/Button/Button";
 import DiscountAlert from "../DiscountAlert/DiscountAlert";
+import InfoSection from "../InfoSection/InfoSection";
 
 const productInfoItems = [
   {
@@ -73,7 +74,6 @@ export default function ProductInfo() {
           </SwiperSlide>
         </Swiper>
       </div>
-
       <div className={styles["product-img-list"]}>
         <div className={styles["product-img-list__item"]}>
           <img src="/assets/images/item-img-01@3x.png" alt="product-img-1" />
@@ -115,7 +115,6 @@ export default function ProductInfo() {
           <img src="/assets/images/item-img-01@3x.png" alt="product-img-1" />
         </div>
       </div>
-
       <div className={styles["product-info"]}>
         <div className={styles["product-info__title-wrap"]}>
           <h3 className={styles["product-info__title-wrap__prod-name"]}>

@@ -1,0 +1,98 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.review-item-wrap {
+  display: flex;
+  font-family: "Noto Sans KR", system-ui;
+  gap: 30px;
+  &__img {
+    height: 70px;
+    width: 70px;
+    flex-shrink: 0;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      align-items: center;
+      gap: 18px;
+    }
+    @include respond-to(lg) {
+      gap: 24px;
+    }
+    @include respond-to(xl) {
+      gap: 40px;
+    }
+  }
+}
+
+.reviewer-name,
+.date-review {
+  color: variables.$black-111;
+  text-transform: uppercase;
+  line-height: 1.67;
+  font-size: 14px;
+  flex-shrink: 0;
+
+  @include respond-to(sm) {
+    font-size: 16px;
+  }
+  @include respond-to(lg) {
+    font-size: 18px;
+  }
+}
+
+.reviewer-name {
+  @include respond-to(sm) {
+    order: 2;
+  }
+}
+.date-review {
+  @include respond-to(sm) {
+    order: 3;
+  }
+}
+
+.text-group {
+  @include respond-to(sm) {
+    order: 1;
+    flex-grow: 1;
+  }
+}
+
+.prod-clarification,
+.review {
+  line-height: 1.67;
+  font-size: 14px;
+  @include respond-to(sm) {
+    font-size: 16px;
+  }
+  @include respond-to(lg) {
+    font-size: 18px;
+  }
+}
+
+.prod-clarification {
+  margin-bottom: 16px;
+  color: variables.$gray-8c8;
+}
+.review {
+  color: variables.$black-111;
+}
+.rating {
+  @include respond-to(sm) {
+    order: 4;
+    margin-left: 12px;
+  }
+}
