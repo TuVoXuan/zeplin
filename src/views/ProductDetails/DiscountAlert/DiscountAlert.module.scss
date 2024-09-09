@@ -1,0 +1,24 @@
+@use "../../../styles/variables.scss";
+
+.discount-alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: variables.$gray-f6f;
+  border: 1px solid variables.$gray-eff;
+  padding: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Noto Sans KR", system-ui;
+  line-height: 1.88;
+  color: variables.$black-111;
+
+  :global(.text-orange) {
+    color: variables.$orange-f96;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

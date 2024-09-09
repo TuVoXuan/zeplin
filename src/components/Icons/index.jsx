@@ -6,6 +6,7 @@ import ArrowRightLong from "./ArrowRightLong";
 import Diamond from "./Diamond";
 import ChevronRight from "./ChevronRight";
 import Search from "./Search";
+import Star from "./Star";
 
 const Icons = {
   Menu,
@@ -16,6 +17,7 @@ const Icons = {
   Diamond,
   ChevronRight,
   Search,
+  Star,
 };
 
 export default Icons;

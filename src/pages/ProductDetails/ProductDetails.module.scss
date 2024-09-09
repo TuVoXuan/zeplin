@@ -1,0 +1,115 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.product-details-wrap {
+  @include respond-to(2xl) {
+    max-width: 1140px;
+  }
+}
+
+.tab-content-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid variables.$gray-f4f;
+  min-height: 150px;
+  font-size: 14px;
+  margin-bottom: 75px;
+  @include respond-to(sm) {
+    font-size: 16px;
+    min-height: 200px;
+    margin-bottom: 90px;
+  }
+  @include respond-to(lg) {
+    font-size: 20px;
+    margin-bottom: 120px;
+  }
+  @include respond-to(xl) {
+    margin-bottom: 150px;
+  }
+}
+
+.prod-payment-info-section {
+  margin-bottom: 50px;
+  @include respond-to(sm) {
+    margin-bottom: 66px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 80px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 100px;
+  }
+}
+
+.return-policy-section {
+  margin-bottom: 74px;
+  @include respond-to(sm) {
+    margin-bottom: 98px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 118px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 148px;
+  }
+
+  &__para {
+    margin-bottom: 30px;
+    font-family: "Noto Sans KR", system-ui;
+    line-height: 2;
+    color: variables.$black-111;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include respond-to(sm) {
+      margin-bottom: 40px;
+    }
+    @include respond-to(lg) {
+      margin-bottom: 48px;
+    }
+    @include respond-to(lg) {
+      margin-bottom: 60px;
+    }
+
+    p {
+      font-weight: 300;
+    }
+  }
+}
+
+.review-section {
+  margin-bottom: 54px;
+
+  @include respond-to(sm) {
+    margin-bottom: 72px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 86px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 108px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.best-product-section {
+  margin-bottom: 50px;
+
+  @include respond-to(sm) {
+    margin-bottom: 66px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 80px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 100px;
+  }
+}

@@ -82,7 +82,7 @@ export default function Login() {
             )}
           />
 
-          <Button variant="solid" fluid htmlType="submit">
+          <Button variant="contained" color="blue" fluid htmlType="submit">
             로그인하기
           </Button>
         </form>
@@ -134,7 +134,12 @@ export default function Login() {
           </button>
         </div>
 
-        <Button variant="outline" fluid onClick={handleClickRegister}>
+        <Button
+          variant="outlined"
+          color="black"
+          fluid
+          onClick={handleClickRegister}
+        >
           계정이 없으신가요? 간편가입하기
         </Button>
 

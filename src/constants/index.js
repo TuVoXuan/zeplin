@@ -5,5 +5,6 @@ export const AppPath = {
     Home: '/',
     Login: '/login',
     Register: '/register',
-    Shop: '/shop'
+    Shop: '/shop',
+    ProductDetail: '/product-details'
 }

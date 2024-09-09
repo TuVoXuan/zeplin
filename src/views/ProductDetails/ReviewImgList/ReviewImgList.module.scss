@@ -1,0 +1,35 @@
+@import "../../../styles/responsive.scss";
+
+.review-img-list-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &__item {
+    height: 107px;
+    width: 107px;
+    flex-shrink: 0;
+    cursor: pointer;
+    @include respond-to(sm) {
+      height: 147px;
+      width: 147px;
+    }
+    @include respond-to(lg) {
+      height: 171px;
+      width: 171px;
+    }
+    @include respond-to(xl) {
+      height: 214px;
+      width: 214px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

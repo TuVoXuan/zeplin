@@ -190,7 +190,7 @@ export default function Register() {
             />
           </div>
 
-          <Button variant="solid" fluid htmlType="submit">
+          <Button variant="contained" color="blue" fluid htmlType="submit">
             가입하기
           </Button>
         </form>

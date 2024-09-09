@@ -3,7 +3,13 @@ import React, { useState, useEffect } from "react";
 import Icons from "../Icons";
 import clsx from "clsx";
 
-const Pagination = ({ totalPages, current, onChange, maxVisiblePages = 5 }) => {
+const Pagination = ({
+  totalPages,
+  current,
+  onChange,
+  maxVisiblePages = 5,
+  className,
+}) => {
   const handlePageChange = (page) => {
     if (page !== current) {
       onChange(page);
@@ -63,7 +69,7 @@ const Pagination = ({ totalPages, current, onChange, maxVisiblePages = 5 }) => {
   };
 
   return (
-    <div className={styles["pagination-wrap"]}>
+    <div className={clsx(styles["pagination-wrap"], className)}>
       <button
         className={styles["pagination-wrap__previous-btn"]}
         onClick={() => handlePageChange(current - 1)}
