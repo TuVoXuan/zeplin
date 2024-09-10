@@ -1,0 +1,44 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.shopping-bag-table-wrap {
+  overflow-x: auto;
+
+  tr {
+    border-top: 1px solid variables.$black-111;
+    &:last-child {
+      border-bottom: 1px solid variables.$black-111;
+    }
+  }
+  th {
+    padding: 22px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: variables.$black-111;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+
+    &:first-child {
+      font-size: 16px;
+    }
+  }
+  td {
+    padding: 22px 0;
+    vertical-align: middle;
+  }
+}
+
+.delete-items-btn {
+  margin-top: 30px;
+  border-color: variables.$gray-a1a !important;
+  font-size: 12px !important;
+  @include respond-to(sm) {
+    font-size: 14px !important;
+  }
+}
