@@ -10,20 +10,6 @@
   transition: all 0.3s linear;
   cursor: pointer;
 
-  // &:hover {
-  //   opacity: 0.8;
-  // }
-
-  // &--solid {
-  //   background-color: variables.$blue-056;
-  //   color: variables.$white-fff;
-  // }
-  // &--outline-black {
-  //   background-color: variables.$white-fff;
-  //   border: 1px solid variables.$black-111;
-  //   color: variables.$black-111;
-  // }
-
   &.contained {
     color: variables.$white-fff;
 
@@ -37,6 +23,13 @@
 
     &.black {
       background-color: variables.$black-111;
+      &:hover {
+        background-color: darken(variables.$black-111, 10%);
+      }
+    }
+
+    &.orange {
+      background-color: variables.$orange-ea4;
       &:hover {
         background-color: darken(variables.$black-111, 10%);
       }
@@ -59,6 +52,13 @@
       border-color: variables.$black-111;
       &:hover {
         background-color: lighten(variables.$black-111, 90%);
+      }
+    }
+    &.orange {
+      color: variables.$orange-ea4;
+      border-color: variables.$orange-ea4;
+      &:hover {
+        background-color: lighten(variables.$orange-ea4, 90%);
       }
     }
   }

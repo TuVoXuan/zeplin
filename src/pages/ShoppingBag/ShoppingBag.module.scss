@@ -1,0 +1,141 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.shopping-bag-wrap {
+  @include respond-to(2xl) {
+    max-width: 1140px;
+  }
+}
+
+.title {
+  font-size: 20px;
+  color: variables.$blue-056;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 45px;
+
+  @include respond-to(sm) {
+    font-size: 24px;
+    margin-top: 60px;
+  }
+  @include respond-to(lg) {
+    font-size: 32px;
+    margin-top: 72px;
+  }
+  @include respond-to(xl) {
+    margin-top: 90px;
+    font-size: 36px;
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 20px;
+
+  @include respond-to(sm) {
+    margin-top: 46px;
+    margin-bottom: 26px;
+  }
+  @include respond-to(lg) {
+    margin-top: 56px;
+    margin-bottom: 32px;
+  }
+  @include respond-to(xl) {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+}
+
+.total-price {
+  margin-top: 50px;
+  border-top: 1px solid variables.$black-111;
+  border-bottom: 1px solid variables.$black-111;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  @include respond-to(sm) {
+    margin-top: 66px;
+    gap: 40px;
+  }
+  @include respond-to(lg) {
+    margin-top: 80px;
+    gap: 60px;
+  }
+  @include respond-to(xl) {
+    margin-top: 100px;
+    gap: 80px;
+  }
+
+  &__money {
+    font-size: 18px;
+    font-weight: 700;
+    color: variables.$black-111;
+    line-height: 2;
+    @include respond-to(sm) {
+      font-size: 24px;
+    }
+    @include respond-to(lg) {
+      font-size: 26px;
+    }
+    @include respond-to(xl) {
+      font-size: 30px;
+    }
+
+    &__currency {
+      font-size: 14px;
+      font-weight: 600;
+      @include respond-to(sm) {
+        font-size: 16px;
+      }
+      @include respond-to(lg) {
+        font-size: 18px;
+      }
+      @include respond-to(xl) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__operator {
+    font-size: 24px;
+    color: variables.$gray-a1a;
+    @include respond-to(lg) {
+      font-size: 28px;
+    }
+  }
+}
+
+.checkout-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 57px;
+  margin-bottom: 63px;
+
+  @include respond-to(sm) {
+    margin-top: 76px;
+    margin-bottom: 84px;
+  }
+  @include respond-to(lg) {
+    margin-top: 91px;
+    margin-bottom: 100px;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 126px;
+    margin-top: 114px;
+  }
+
+  button {
+    padding: 12px 56px;
+    height: fit-content;
+    font-weight: 500;
+    @include respond-to(sm) {
+      padding: 24px 112px;
+    }
+  }
+}

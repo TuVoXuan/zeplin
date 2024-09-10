@@ -1,0 +1,189 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 450px;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    border-left: 1px solid variables.$black-111;
+  }
+
+  &__img {
+    height: 70px;
+    width: 70px;
+
+    @include respond-to(sm) {
+      height: 80px;
+      width: 80px;
+    }
+    @include respond-to(lg) {
+      height: 96px;
+      width: 96px;
+    }
+    @include respond-to(xl) {
+      height: 120px;
+      width: 120px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__prod-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: variables.$black-111;
+      line-height: 1.67;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include respond-to(sm) {
+        font-size: 18px;
+      }
+    }
+    &__price {
+      margin-top: 12px;
+      font-size: 12px;
+      color: variables.$black-111;
+      font-family: "Noto Sans KR", system-ui;
+
+      @include respond-to(sm) {
+        font-size: 14px;
+      }
+    }
+    &__discount {
+      font-size: 12px;
+      color: variables.$orange-ea4;
+      margin-top: 9px;
+      font-family: "Noto Sans KR", system-ui;
+
+      @include respond-to(sm) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__delete-btn {
+    border: 1px solid variables.$gray-a1a;
+    color: variables.$gray-a1a;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &__icon {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+.quantity-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  div {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: variables.$black-111;
+    font-size: 14px;
+  }
+
+  &__minus-btn,
+  &__add-btn {
+    border: 1px solid variables.$black-111;
+  }
+}
+
+.total-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  min-width: 250px;
+  &__price {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    white-space: nowrap;
+
+    @include respond-to(sm) {
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+    @include respond-to(lg) {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    @include respond-to(xl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  button {
+    padding: 16px 35px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    height: fit-content;
+    font-size: 12px;
+    @include respond-to(sm) {
+      font-size: 14px;
+    }
+  }
+}
+
+.shipping-fee {
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 14px;
+  color: variables.$black-111;
+  font-family: "Noto Sans KR", system-ui;
+  white-space: nowrap;
+  text-align: center;
+  @include respond-to(sm) {
+    font-size: 16px;
+  }
+  @include respond-to(lg) {
+    font-size: 18px;
+  }
+}

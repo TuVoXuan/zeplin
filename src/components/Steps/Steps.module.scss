@@ -1,0 +1,20 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.steps-wrap {
+  display: flex;
+  align-items: center;
+  &__item {
+    color: variables.$gray-9a9;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+
+    &--active {
+      color: variables.$black-111;
+    }
+  }
+}

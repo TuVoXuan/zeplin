@@ -11,6 +11,8 @@ import Select from "../../../components/Select/Select";
 import Button from "../../../components/Button/Button";
 import DiscountAlert from "../DiscountAlert/DiscountAlert";
 import InfoSection from "../InfoSection/InfoSection";
+import { Link } from "react-router-dom";
+import { AppPath } from "../../../constants";
 
 const productInfoItems = [
   {
@@ -150,7 +152,7 @@ export default function ProductInfo() {
           <Select placeholder={"Color: size"} showDropdownIcon />
           <div className={styles["product-info__group-info__group-btn"]}>
             <Button variant="outlined" color="blue" fluid>
-              add cart
+              <Link to={AppPath.ShoppingBag}>add cart</Link>
             </Button>
             <Button variant="contained" color="blue" fluid>
               buy now

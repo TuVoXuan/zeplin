@@ -8,6 +8,7 @@ import { AppPath } from './constants';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Shop from './pages/Shop/Shop';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
+import ShoppingBag from './pages/ShoppingBag/ShoppingBag';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path={AppPath.Register} element={<Register/>}/>
         <Route path={AppPath.Shop} element={<Shop/>}/>
         <Route path={`${AppPath.ProductDetail}/:productCode`} element={<ProductDetails/>}/>
+        <Route path={AppPath.ShoppingBag} element={<ShoppingBag/>}/>
       </Routes>
       <ScrollToTop/>
     </Layout>
