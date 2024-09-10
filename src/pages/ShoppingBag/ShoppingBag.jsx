@@ -4,6 +4,8 @@ import Steps from "../../components/Steps/Steps";
 import ShoppingBagTable from "../../views/ShoppingBag/ShoppingBagTable/ShoppingBagTable";
 import clsx from "clsx";
 import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
+import { AppPath } from "../../constants/index";
 
 const steps = [
   {
@@ -81,37 +83,60 @@ export default function ShoppingBag() {
   return (
     <div className={clsx("container", styles["shopping-bag-wrap"])}>
       <h1 className={styles["title"]}>shopping bag</h1>
-      <div className={styles["steps"]}>
-        <Steps steps={steps} />
-      </div>
 
-      <ShoppingBagTable
-        cartItems={cartItems}
-        onChangeCartItems={handleChangeCart}
-      />
+      {cartItems.length > 0 ? (
+        <>
+          <div className={styles["steps"]}>
+            <Steps steps={steps} />
+          </div>
+          <ShoppingBagTable
+            cartItems={cartItems}
+            onChangeCartItems={handleChangeCart}
+          />
 
-      <div className={styles["total-price"]}>
-        <div className={styles["total-price__money"]}>
-          {new Intl.NumberFormat("en-US").format(totalItemsPrice)}{" "}
-          <span className={styles["total-price__money__currency"]}>won</span>
-        </div>
-        <div className={styles["total-price__operator"]}>+</div>
-        <div className={styles["total-price__money"]}>
-          {new Intl.NumberFormat("en-US").format(shippingFee)}{" "}
-          <span className={styles["total-price__money__currency"]}>won</span>
-        </div>
-        <div className={styles["total-price__operator"]}>=</div>
-        <div className={styles["total-price__money"]}>
-          {new Intl.NumberFormat("en-US").format(totalItemsPrice + shippingFee)}{" "}
-          <span className={styles["total-price__money__currency"]}>won</span>
-        </div>
-      </div>
+          <div className={styles["total-price"]}>
+            <div className={styles["total-price__money"]}>
+              {new Intl.NumberFormat("en-US").format(totalItemsPrice)}{" "}
+              <span className={styles["total-price__money__currency"]}>
+                won
+              </span>
+            </div>
+            <div className={styles["total-price__operator"]}>+</div>
+            <div className={styles["total-price__money"]}>
+              {new Intl.NumberFormat("en-US").format(shippingFee)}{" "}
+              <span className={styles["total-price__money__currency"]}>
+                won
+              </span>
+            </div>
+            <div className={styles["total-price__operator"]}>=</div>
+            <div className={styles["total-price__money"]}>
+              {new Intl.NumberFormat("en-US").format(
+                totalItemsPrice + shippingFee
+              )}{" "}
+              <span className={styles["total-price__money__currency"]}>
+                won
+              </span>
+            </div>
+          </div>
 
-      <div className={styles["checkout-btn"]}>
-        <Button variant="contained" color="blue">
-          check out
-        </Button>
-      </div>
+          <div className={styles["checkout-btn"]}>
+            <Button variant="contained" color="blue">
+              check out
+            </Button>
+          </div>
+        </>
+      ) : (
+        <div className={styles["empty-bag-wrap"]}>
+          <h3>Opps!</h3>
+          <p>Your shopping bag is empty.</p>
+          <p>
+            Please choose the products you want to buy and go back here.{" "}
+            <Link className={styles["empty-bag-wrap__link"]} to={AppPath.Home}>
+              Go to Home page
+            </Link>
+          </p>
+        </div>
+      )}
     </div>
   );
 }
