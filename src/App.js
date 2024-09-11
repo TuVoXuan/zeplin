@@ -10,6 +10,7 @@ import Shop from './pages/Shop/Shop';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import ShoppingBag from './pages/ShoppingBag/ShoppingBag';
 import Order from './pages/Order/Order';
+import MyAccount from './pages/MyAccount/MyAccount';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path={`${AppPath.ProductDetail}/:productCode`} element={<ProductDetails/>}/>
         <Route path={AppPath.ShoppingBag} element={<ShoppingBag/>}/>
         <Route path={AppPath.Order} element={<Order/>}/>
+        <Route path={AppPath.MyAccount} element={<MyAccount/>}/>
       </Routes>
       <ScrollToTop/>
     </Layout>

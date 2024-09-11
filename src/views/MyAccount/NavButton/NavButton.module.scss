@@ -1,0 +1,29 @@
+@use "../../../styles/variables.scss";
+
+.nav-btn {
+  background-color: variables.$gray-f8f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  padding: 30px 0;
+
+  svg {
+    height: 28px;
+    width: 28px;
+    color: variables.$black-111;
+  }
+
+  &__eng-text {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__kor-text {
+    font-family: "Noto Sans KR", system-ui;
+    font-size: 14px;
+    line-height: 1.29;
+    white-space: nowrap;
+  }
+}

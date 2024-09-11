@@ -1,0 +1,140 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.my-account-wrap {
+  @include respond-to(2xl) {
+    max-width: 1140px;
+  }
+}
+
+.title {
+  font-size: 20px;
+  color: variables.$blue-056;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 45px;
+
+  @include respond-to(sm) {
+    font-size: 24px;
+    margin-top: 60px;
+  }
+  @include respond-to(lg) {
+    font-size: 32px;
+    margin-top: 72px;
+  }
+  @include respond-to(xl) {
+    margin-top: 90px;
+    font-size: 36px;
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 20px;
+
+  @include respond-to(sm) {
+    margin-top: 46px;
+    margin-bottom: 26px;
+  }
+  @include respond-to(lg) {
+    margin-top: 56px;
+    margin-bottom: 32px;
+  }
+  @include respond-to(xl) {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+}
+
+.point-info-item {
+  display: flex;
+  justify-content: space-between;
+  color: variables.$black-111;
+  font-size: 14px;
+  padding: 0 8px;
+  font-family: "Noto Sans KR", system-ui;
+  line-height: 1.67;
+  @include respond-to(sm) {
+    padding: 0 32px;
+  }
+  @include respond-to(lg) {
+    padding: 0 46px;
+  }
+  @include respond-to(lg) {
+    padding: 0 54px;
+  }
+}
+
+.order-status {
+  margin-top: 50px;
+  @include respond-to(sm) {
+    margin-top: 66px;
+  }
+  @include respond-to(lg) {
+    margin-top: 80px;
+  }
+  @include respond-to(xl) {
+    margin-top: 100px;
+  }
+  &__title {
+    font-size: 16px;
+    color: variables.$black-111;
+    font-family: "Noto Sans KR", system-ui;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    @include respond-to(sm) {
+      font-size: 18px;
+    }
+    @include respond-to(lg) {
+      font-size: 20px;
+    }
+    @include respond-to(xl) {
+      font-size: 24px;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: variables.$black-111;
+    font-family: "Noto Sans KR", system-ui;
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+  }
+}
+
+.nav-btn-group {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  @include respond-to(sm) {
+    margin-top: 33px;
+    margin-bottom: 66px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include respond-to(lg) {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  @include respond-to(xl) {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+}

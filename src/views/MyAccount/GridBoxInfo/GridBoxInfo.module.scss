@@ -1,0 +1,17 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.grid-box-info {
+  display: grid;
+  border-top: 1px solid variables.$black-111;
+  border-bottom: 1px solid variables.$black-111;
+  padding: 12px 0;
+
+  &_item {
+    border-right: 1px solid variables.$black-111;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
