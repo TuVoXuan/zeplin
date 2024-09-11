@@ -1,0 +1,147 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.order-item-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid variables.$black-111;
+
+  @include respond-to(sm) {
+    gap: 20px;
+    padding-top: 32px;
+    padding-bottom: 53px;
+  }
+  @include respond-to(lg) {
+    gap: 24px;
+    padding-top: 38px;
+    padding-bottom: 64px;
+  }
+  @include respond-to(xl) {
+    gap: 30px;
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__image {
+    height: 90px;
+    width: 90px;
+    flex-shrink: 0;
+    @include respond-to(sm) {
+      height: 120px;
+      width: 120px;
+    }
+    @include respond-to(lg) {
+      height: 144px;
+      width: 144px;
+    }
+    @include respond-to(xl) {
+      height: 180px;
+      width: 180px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__text-wrap {
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: variables.$black-111;
+      font-family: "Montserrat", sans-serif;
+      @include respond-to(sm) {
+        font-size: 18px;
+      }
+    }
+
+    &__prod-name {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    p {
+      font-size: 12px;
+      font-family: "Noto Sans KR", system-ui;
+      color: variables.$black-111;
+
+      @include respond-to(sm) {
+        font-size: 14px;
+      }
+    }
+
+    &__discount {
+      color: variables.$orange-ea4 !important;
+    }
+  }
+}
+
+.order-info-wrap {
+  padding: 30px 0;
+  border-bottom: 1px solid variables.$black-111;
+}
+
+.order-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: variables.$black-111;
+
+  &:last-child {
+    margin-top: 15px;
+    @include respond-to(sm) {
+      margin-top: 20px;
+    }
+    @include respond-to(lg) {
+      margin-top: 24px;
+    }
+    @include respond-to(xl) {
+      margin-top: 30px;
+    }
+  }
+
+  @include respond-to(sm) {
+    font-size: 18px;
+  }
+
+  &__title-bold {
+    font-weight: 500;
+  }
+
+  &__price-large {
+    font-size: 24px;
+    color: variables.$orange-ea4 !important;
+    @include respond-to(sm) {
+      font-size: 26px;
+    }
+    @include respond-to(lg) {
+      font-size: 28px;
+    }
+    @include respond-to(xl) {
+      font-size: 30px;
+    }
+
+    &__currency {
+      font-size: 16px;
+      @include respond-to(sm) {
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -10,7 +10,6 @@ import Descriptions from "../../../components/Descriptions/Descriptions";
 import Select from "../../../components/Select/Select";
 import Button from "../../../components/Button/Button";
 import DiscountAlert from "../DiscountAlert/DiscountAlert";
-import InfoSection from "../InfoSection/InfoSection";
 import { Link } from "react-router-dom";
 import { AppPath } from "../../../constants";
 

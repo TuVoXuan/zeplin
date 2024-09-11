@@ -1,0 +1,37 @@
+@use "../../styles/variables.scss";
+
+.collapse-wrap {
+  border: 1px solid variables.$gray-ded;
+  &__header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &__triangle {
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid variables.$black-111;
+    }
+    &__title {
+      font-family: "Noto Sans KR", system-ui;
+      color: variables.$black-111;
+      font-size: 14px;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms ease-out;
+
+    &__content {
+      overflow: hidden;
+    }
+
+    &.expand {
+      grid-template-rows: 1fr;
+      border-top: 1px solid variables.$gray-ded;
+    }
+  }
+}
