@@ -21,7 +21,7 @@ const steps = [
 export default function MyAccount() {
   return (
     <div className={clsx("container", styles["my-account-wrap"])}>
-      <h1 className={styles["title"]}>order</h1>
+      <h1 className={styles["title"]}>my account</h1>
       <div className={styles["steps"]}>
         <Steps steps={steps} />
       </div>
