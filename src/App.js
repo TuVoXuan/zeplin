@@ -9,6 +9,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Shop from './pages/Shop/Shop';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import ShoppingBag from './pages/ShoppingBag/ShoppingBag';
+import Order from './pages/Order/Order';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path={AppPath.Shop} element={<Shop/>}/>
         <Route path={`${AppPath.ProductDetail}/:productCode`} element={<ProductDetails/>}/>
         <Route path={AppPath.ShoppingBag} element={<ShoppingBag/>}/>
+        <Route path={AppPath.Order} element={<Order/>}/>
       </Routes>
       <ScrollToTop/>
     </Layout>

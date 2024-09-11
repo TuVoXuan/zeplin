@@ -1,7 +1,7 @@
 import React, { Fragment, isValidElement, useRef, useState } from "react";
 import styles from "./InfoSection.module.scss";
-import useResponsive from "../../../hook/useResponsive";
-import { useClickOutside } from "../../../hook/useClickOutside";
+import useResponsive from "../../hook/useResponsive";
+import { useClickOutside } from "../../hook/useClickOutside";
 import clsx from "clsx";
 
 const TabPanel = ({ children, value, index }) => {
@@ -18,6 +18,7 @@ export default function InfoSection({
   defaultActiveTab,
   actions,
   children,
+  headRightChildren,
   className,
 }) {
   const [showTabsModal, setShowTabsModal] = useState(false);
@@ -119,6 +120,8 @@ export default function InfoSection({
               ))}
             </div>
           )}
+
+          {headRightChildren}
         </div>
       </div>
       <div className={styles["info-section-body"]}>

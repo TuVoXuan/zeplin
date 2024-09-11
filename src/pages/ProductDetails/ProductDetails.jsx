@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import styles from "./ProductDetails.module.scss";
 import ProductInfo from "../../views/ProductDetails/ProductInfo/ProductInfo";
 import clsx from "clsx";
-import InfoSection from "../../views/ProductDetails/InfoSection/InfoSection";
 import Rating from "../../views/ProductDetails/Rating/Rating";
 import useResponsive from "../../hook/useResponsive";
 import ReviewImgList from "../../views/ProductDetails/ReviewImgList/ReviewImgList";
 import ReviewList from "../../views/ProductDetails/ReviewList/ReviewList";
 import BestProduct from "../../views/ProductDetails/BestProducts/BestProduct";
+import InfoSection from "../../components/InfoSection/InfoSection";
 
 const tabs = [
   {

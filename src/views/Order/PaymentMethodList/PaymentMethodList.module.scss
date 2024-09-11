@@ -1,0 +1,45 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.payment-method-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  @include respond-to(sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  @include respond-to(xl) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  &__item {
+    padding: 16px 0;
+    text-align: center;
+    font-family: "Noto Sans KR", system-ui;
+    font-size: 14px;
+    border: 1px solid variables.$black-111;
+    background-color: variables.$white-fff;
+    color: variables.$black-111;
+
+    &--active {
+      background-color: variables.$orange-ea4;
+      border: 1px solid variables.$orange-ea4;
+      color: variables.$white-fff;
+    }
+  }
+}
+
+.form-payment-wrap {
+  margin-top: 24px;
+}
+
+.form-payment {
+  padding: 12px;
+}
+
+.bulletin-box-wrap {
+  margin-top: 28px;
+}

@@ -1,0 +1,27 @@
+@use "../../../styles/variables.scss";
+
+.bulletin-box {
+  border: 1px solid variables.$black-111;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Noto Sans KR", system-ui;
+    font-weight: 300;
+    color: variables.$black-111;
+
+    &__type_tag {
+      border: 1px solid variables.$black-111;
+      padding: 0 8px;
+      font-size: 12px;
+    }
+    &__link {
+      font-size: 14px;
+    }
+  }
+}

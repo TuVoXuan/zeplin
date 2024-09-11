@@ -1,0 +1,45 @@
+@use "../../../styles/variables.scss";
+
+.phone-number-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  span {
+    color: variables.$gray-a1a;
+    font-size: 20px;
+  }
+
+  input {
+    padding: 16px 18px;
+    border: 1px solid variables.$gray-6b7;
+    min-width: 100px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    &:focus {
+      outline-color: variables.$blue-056;
+    }
+
+    &::placeholder {
+      color: variables.$gray-a1a;
+    }
+  }
+
+  &__divider {
+    flex-shrink: 0;
+    width: 10px;
+    border-bottom: 1px solid variables.$gray-a1a;
+  }
+
+  &.error input {
+    outline-color: variables.$red-dc2 !important;
+    border-color: variables.$red-dc2;
+  }
+}
+
+.error-text {
+  font-size: 14px;
+  color: variables.$red-dc2;
+  margin-top: 4px;
+}
