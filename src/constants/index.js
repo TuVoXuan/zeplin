@@ -8,5 +8,6 @@ export const AppPath = {
     Shop: '/shop',
     ProductDetail: '/product-details',
     ShoppingBag: '/shopping-bag',
-    Order: '/Order'
+    Order: '/order',
+    MyAccount: '/my-account'
 }

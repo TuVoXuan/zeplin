@@ -1,0 +1,100 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
+
+.recent-order-table {
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    border-top: 1px solid variables.$black-111;
+    &:last-child {
+      border-bottom: 1px solid variables.$black-111;
+    }
+  }
+  th {
+    padding: 22px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: variables.$black-111;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+
+    &:first-child {
+      font-size: 16px;
+    }
+  }
+}
+
+.table-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+
+  &__title {
+    color: variables.$black-111;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include respond-to(sm) {
+      font-size: 18px;
+    }
+    @include respond-to(lg) {
+      font-size: 20px;
+    }
+    @include respond-to(xl) {
+      font-size: 24px;
+    }
+  }
+
+  &__see-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: variables.$black-111;
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+
+    &__icon {
+      height: 12px;
+      width: 12px;
+      color: variables.$black-222;
+    }
+  }
+}
+
+.no-data {
+  font-family: "Noto Sans KR", system-ui;
+  text-align: center;
+  font-size: 16px;
+  color: variables.$black-111;
+  padding: 40px 0;
+  width: 100%;
+  column-span: 4;
+
+  @include respond-to(sm) {
+    font-size: 18px;
+    padding: 53px 0;
+  }
+  @include respond-to(lg) {
+    font-size: 20px;
+    padding: 64px 0;
+  }
+  @include respond-to(xl) {
+    padding: 80px 0;
+  }
+}

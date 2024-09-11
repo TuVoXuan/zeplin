@@ -7,6 +7,11 @@ import Diamond from "./Diamond";
 import ChevronRight from "./ChevronRight";
 import Search from "./Search";
 import Star from "./Star";
+import CreditCard from "./CreditCard";
+import User from "./User";
+import Coupon from "./Coupon";
+import Board from "./Board";
+import Truck from "./Truck";
 
 const Icons = {
   Menu,
@@ -18,6 +23,11 @@ const Icons = {
   ChevronRight,
   Search,
   Star,
+  CreditCard,
+  User,
+  Coupon,
+  Board,
+  Truck,
 };
 
 export default Icons;
