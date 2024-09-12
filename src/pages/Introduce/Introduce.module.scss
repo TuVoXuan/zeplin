@@ -1,0 +1,358 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.introduce-wrap {
+  @include respond-to(xl) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+.banner {
+  background-image: image-set(
+    url("../../../public/assets/images/introduction-bg.png") 1x,
+    url("../../../public/assets/images/introduction-bg@2x.png") 2x,
+    url("../../../public/assets/images/introduction-bg@3x.png") 3x
+  );
+  background-position: center;
+  background-size: cover;
+  color: variables.$white-fff;
+  padding: 80px 20px;
+  box-sizing: border-box;
+
+  @include respond-to(sm) {
+    padding: 40px;
+  }
+
+  @include respond-to(lg) {
+    padding: 100px;
+  }
+
+  @include respond-to(xl) {
+    padding: 170px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+
+    @include respond-to(sm) {
+      font-size: 36px;
+    }
+    @include respond-to(lg) {
+      font-size: 42px;
+    }
+    @include respond-to(xl) {
+      font-size: 50px;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond-to(sm) {
+      margin-top: 40px;
+    }
+    @include respond-to(lg) {
+      margin-top: 48px;
+    }
+    @include respond-to(xl) {
+      margin-top: 60px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+
+      @include respond-to(sm) {
+        max-width: 665px;
+        font-size: 16px;
+      }
+      @include respond-to(lg) {
+        font-size: 18px;
+      }
+      @include respond-to(xl) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: variables.$orange-ea4;
+  padding: 20px 0;
+
+  @include respond-to(sm) {
+    padding: 28px 0;
+  }
+  @include respond-to(lg) {
+    padding: 36px 0;
+  }
+  @include respond-to(xl) {
+    padding: 42px 0;
+  }
+
+  &__item {
+    background-color: variables.$white-fff;
+    color: variables.$black-111;
+    font-weight: 800;
+    font-size: 14px;
+    padding: 8px 0;
+    border-radius: 50px;
+    border: 3px solid variables.$black-111;
+    text-transform: uppercase;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+
+    &--active {
+      background-color: variables.$yellow-fcd;
+      color: variables.$blue-065;
+    }
+
+    @include respond-to(sm) {
+      font-size: 16px;
+      width: 180px;
+      padding: 12px 0;
+    }
+    @include respond-to(lg) {
+      font-size: 20px;
+      width: 200px;
+      padding: 16px 0;
+    }
+    @include respond-to(xl) {
+      width: 220px;
+    }
+  }
+}
+
+.text-content-wrap {
+  @include respond-to(xl) {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.what-happenned-to {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 36px;
+
+  @include respond-to(sm) {
+    margin-top: 48px;
+  }
+  @include respond-to(lg) {
+    margin-top: 58px;
+  }
+  @include respond-to(xl) {
+    margin-top: 73px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    color: variables.$blue-065;
+    margin-bottom: 77px;
+    text-transform: uppercase;
+
+    @include respond-to(sm) {
+      font-size: 48px;
+      margin-bottom: 102px;
+    }
+    @include respond-to(lg) {
+      font-size: 57px;
+      margin-bottom: 123px;
+    }
+    @include respond-to(xl) {
+      font-size: 72px;
+      margin-bottom: 154px;
+    }
+  }
+
+  &__description-kor {
+    font-family: "Noto Sans KR", system-ui;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+
+    @include respond-to(sm) {
+      font-size: 20px;
+    }
+    @include respond-to(lg) {
+      font-size: 24px;
+    }
+    @include respond-to(xl) {
+      font-size: 30px;
+    }
+  }
+
+  &__description-eng {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    margin-top: 37px;
+
+    @include respond-to(sm) {
+      font-size: 20px;
+      margin-top: 50px;
+    }
+    @include respond-to(lg) {
+      font-size: 24px;
+      margin-top: 60px;
+    }
+    @include respond-to(xl) {
+      font-size: 30px;
+      margin-top: 70px;
+    }
+  }
+}
+
+.contact-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 117px;
+
+  @include respond-to(sm) {
+    margin-top: 156px;
+  }
+  @include respond-to(lg) {
+    margin-top: 187px;
+  }
+  @include respond-to(xl) {
+    margin-top: 234px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    color: variables.$blue-065;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+
+    @include respond-to(sm) {
+      font-size: 48px;
+      margin-bottom: 53px;
+    }
+    @include respond-to(lg) {
+      font-size: 57px;
+      margin-bottom: 64px;
+    }
+    @include respond-to(xl) {
+      font-size: 72px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__text-content {
+    font-family: "Noto Sans KR", system-ui;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+    @include respond-to(xl) {
+      font-size: 24px;
+    }
+  }
+}
+
+.partnership {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 45px;
+
+  @include respond-to(sm) {
+    margin-top: 60px;
+  }
+  @include respond-to(lg) {
+    margin-top: 72px;
+  }
+  @include respond-to(xl) {
+    margin-top: 90px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    color: variables.$blue-065;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+
+    @include respond-to(sm) {
+      font-size: 48px;
+      margin-bottom: 106px;
+    }
+    @include respond-to(lg) {
+      font-size: 57px;
+      margin-bottom: 128px;
+    }
+    @include respond-to(xl) {
+      font-size: 72px;
+      margin-bottom: 160px;
+    }
+  }
+
+  &__text-content {
+    font-family: "Noto Sans KR", system-ui;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+
+    @include respond-to(sm) {
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+    @include respond-to(xl) {
+      font-size: 24px;
+    }
+  }
+}
+
+.introduce-img {
+  margin-top: 76px;
+  margin-bottom: 80px;
+
+  @include respond-to(sm) {
+    margin-top: 101px;
+    margin-bottom: 106px;
+  }
+  @include respond-to(lg) {
+    margin-top: 121px;
+    margin-bottom: 128px;
+  }
+  @include respond-to(xl) {
+    margin-top: 152px;
+    margin-bottom: 160px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

@@ -11,6 +11,7 @@ import ProductDetails from './pages/ProductDetails/ProductDetails';
 import ShoppingBag from './pages/ShoppingBag/ShoppingBag';
 import Order from './pages/Order/Order';
 import MyAccount from './pages/MyAccount/MyAccount';
+import Introduce from './pages/Introduce/Introduce';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path={AppPath.ShoppingBag} element={<ShoppingBag/>}/>
         <Route path={AppPath.Order} element={<Order/>}/>
         <Route path={AppPath.MyAccount} element={<MyAccount/>}/>
+        <Route path={AppPath.Introduce} element={<Introduce/>}/>
       </Routes>
       <ScrollToTop/>
     </Layout>
