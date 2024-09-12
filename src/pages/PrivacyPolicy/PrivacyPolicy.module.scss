@@ -1,0 +1,68 @@
+@use "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.privacy-policy-wrap {
+  padding-top: 45px;
+  padding-bottom: 72px;
+  @include respond-to(sm) {
+    margin-top: 60px;
+    margin-bottom: 96px;
+  }
+  @include respond-to(lg) {
+    margin-top: 72px;
+    margin-bottom: 115px;
+  }
+  @include respond-to(lg) {
+    margin-top: 90px;
+    margin-bottom: 144px;
+  }
+  @include respond-to(xl) {
+    max-width: 1140px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 800;
+    color: variables.$blue-056;
+    line-height: 1.67;
+    text-align: center;
+    padding-bottom: 45px;
+    text-transform: uppercase;
+
+    @include respond-to(sm) {
+      font-size: 24px;
+      padding-bottom: 60px;
+    }
+    @include respond-to(lg) {
+      font-size: 32px;
+      padding-bottom: 72px;
+    }
+    @include respond-to(xl) {
+      font-size: 36px;
+      padding-bottom: 90px;
+    }
+  }
+
+  &__content {
+    border-top: 1px solid variables.$black-111;
+    border-bottom: 1px solid variables.$black-111;
+    padding: 25px 15px;
+    font-size: 14px;
+    font-family: "Noto Sans KR", system-ui;
+    font-weight: 300;
+    line-height: 1.51;
+    color: variables.$black-111;
+
+    @include respond-to(sm) {
+      padding: 33px 20px;
+      font-size: 16px;
+    }
+    @include respond-to(lg) {
+      padding: 40px 24px;
+      font-size: 18px;
+    }
+    @include respond-to(xl) {
+      padding: 50px 30px;
+    }
+  }
+}
