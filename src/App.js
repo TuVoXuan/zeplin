@@ -12,6 +12,7 @@ import ShoppingBag from './pages/ShoppingBag/ShoppingBag';
 import Order from './pages/Order/Order';
 import MyAccount from './pages/MyAccount/MyAccount';
 import Introduce from './pages/Introduce/Introduce';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path={AppPath.Order} element={<Order/>}/>
         <Route path={AppPath.MyAccount} element={<MyAccount/>}/>
         <Route path={AppPath.Introduce} element={<Introduce/>}/>
+        <Route path={AppPath.PrivacyPolicy} element={<PrivacyPolicy/>}/>
       </Routes>
       <ScrollToTop/>
     </Layout>
