@@ -9,5 +9,6 @@ export const AppPath = {
     ProductDetail: '/product-details',
     ShoppingBag: '/shopping-bag',
     Order: '/order',
-    MyAccount: '/my-account'
+    MyAccount: '/my-account',
+    Introduce: '/introduce'
 }
